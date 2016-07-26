@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [application setStatusBarHidden:YES];
+    UIStoryboard *exampleStoryBoard = [UIStoryboard storyboardWithName:@"FinderMode" bundle:nil];
+     UIViewController *target = (UIViewController *)[exampleStoryBoard instantiateViewControllerWithIdentifier:@"CloudRecognitionFinderModeViewController"];
+    UINavigationController *rootNavigation = [[UINavigationController alloc]initWithRootViewController:target];
+    rootNavigation.navigationBarHidden = true;
+    self.window.rootViewController = rootNavigation;
+    
+
     return YES;
 }
 

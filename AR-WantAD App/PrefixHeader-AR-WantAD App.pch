@@ -1,0 +1,45 @@
+//
+//  PrefixHeader-AR-WantAD App.pch
+//  AR-WantAD App
+//
+//  Created by Chintan patel on 24/07/16.
+//  Copyright © 2016 Chintan patel. All rights reserved.
+//
+
+#ifndef PrefixHeader_AR_WantAD_App_pch
+#define PrefixHeader_AR_WantAD_App_pch
+#import "CPLoader.h"
+#import "WebServiceHandler.h"
+#import "CommonMethods.h"
+#import "AppDelegate.h"
+#import "UIImage+FontAwesome.h"
+#import "NSString+FontAwesome.h"
+#import <CraftARCloudImageRecognitionSDK/CraftARCloudRecognition.h>
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define IPAD     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
+#define AppdelegateObj ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+
+#define kColorLoginButton [UIColor colorWithRed:248.0f/255.0f green:0.0f/255.0f blue:73.0f/255.0f alpha:1]
+
+#define kColorSideMenu [UIColor colorWithRed:24.0f/255.0f green:12.0f/255.0f blue:36.0f/255.0f alpha:0.65];
+
+
+#pragma mark - Common Key
+#define kServiceURL @"http://ds.naturalveneers.com/services/services_v1.php"
+
+#define IOS_8PLUS ([[UIDevice currentDevice].systemVersion intValue] >= 8)
+
+#define AppCommonColor [UIColor colorWithRed:83.0f/255.0f green:51.0f/255.0f blue:14.0f/255.0f alpha:1]
+#define AppGreenColor [UIColor colorWithRed:29.0f/255.0f green:139.0f/255.0f blue:57.0f/255.0f alpha:1]
+
+#define kNoInternetConnection_alert_Title @"No Internet Connection"
+#define kNoInternetConnection_alert_Msg @"Please check your Internet Connection."
+#define kLoading @"Loading..."
+
+#endif
