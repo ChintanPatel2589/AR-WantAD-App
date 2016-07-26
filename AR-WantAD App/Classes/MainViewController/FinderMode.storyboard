@@ -40,23 +40,23 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="poP-Cl-gUU">
-                                <rect key="frame" x="0.0" y="380" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="163" width="320" height="277"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_scan.png" id="ik6-bU-nSp">
-                                        <rect key="frame" x="130" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="130" y="217" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_strip_2.png" id="MIf-Tv-hXU">
-                                        <rect key="frame" x="185" y="12" width="135" height="36"/>
+                                        <rect key="frame" x="185" y="229" width="135" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_strip_1.png" id="gCG-JF-dCR">
-                                        <rect key="frame" x="0.0" y="12" width="135" height="36"/>
+                                        <rect key="frame" x="0.0" y="229" width="135" height="36"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OYS-PB-gMe">
-                                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                        <rect key="frame" x="10" y="227" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal">
@@ -67,7 +67,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="foq-EY-CAX">
-                                        <rect key="frame" x="270" y="10" width="40" height="40"/>
+                                        <rect key="frame" x="270" y="227" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal">
@@ -97,6 +97,7 @@
                         <outlet property="btnHelp" destination="foq-EY-CAX" id="ykZ-cT-d7o"/>
                         <outlet property="btnMenu" destination="OYS-PB-gMe" id="SwN-B6-eAc"/>
                         <outlet property="btnShare" destination="Qon-cN-UYb" id="ALf-MI-i35"/>
+                        <outlet property="menuView" destination="poP-Cl-gUU" id="Pwn-sk-ASE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18F-22-T2n" userLabel="First Responder" sceneMemberID="firstResponder"/>

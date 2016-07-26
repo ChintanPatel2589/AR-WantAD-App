@@ -63,13 +63,52 @@
 }
 
 #pragma mark - IBActions 
-- (IBAction)btnMenuTapped:(id)sender
+- (IBAction)btnMenuTapped:(UIButton *)sender
 {
-    
+    if (isMenuOpen) {
+        [self fadeOutAnimationForView:menuOBJ.view];
+    }else{
+        [self showMenu:sender];
+    }
 }
 - (IBAction)btnHelpTapped:(id)sender
 {
     
+}
+-(void)showMenu:(UIButton *)sender{
+    menuOBJ = [[GeneralMenuViewController alloc]initWithNibName:@"GeneralMenuViewController" bundle:nil];
+    [menuView addSubview:menuOBJ.view];
+    menuOBJ.view.hidden = true;
+    CGRect tmpFrame = menuOBJ.view.frame;
+    tmpFrame.origin.y = (sender.frame.origin.y) - (menuOBJ.view.frame.size.height);
+    tmpFrame.origin.x = sender.center.x;
+    menuOBJ.view.frame = tmpFrame;
+    isMenuOpen = true;
+    [self fadeInAnimationForView:menuOBJ.view];
+}
+-(void)hideMenu{
+    isMenuOpen = false;
+    [menuOBJ.view removeFromSuperview];
+    menuOBJ = nil;
+}
+- (void)fadeInAnimationForView:(UIView *)someView
+{
+    someView.hidden = false;
+    [someView setAlpha:0];
+    [UIView beginAnimations:@"FadeIn" context:nil];
+    [UIView setAnimationDuration:0.8];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [someView setAlpha:1];
+    [UIView commitAnimations];
+}
+- (void)fadeOutAnimationForView:(UIView *)someView{
+    [UIView beginAnimations:@"FadeOut" context:nil];
+    [UIView setAnimationDuration:0.5 ];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(hideMenu)];
+    [someView setAlpha:0];
+    [UIView commitAnimations];
 }
 
 
