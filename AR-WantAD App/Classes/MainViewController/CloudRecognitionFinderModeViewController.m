@@ -53,7 +53,6 @@
     [super viewWillAppear:animated];
     // Start Video Preview for search
     [mSDK startCaptureWithView:self._preview];
-    
     if (captureStarted) {
         mCloudRecognition = [CraftARCloudRecognition sharedCloudImageRecognition];
         mCloudRecognition.delegate = self;
@@ -76,7 +75,9 @@
     
 }
 -(void)showMenu:(UIButton *)sender{
+    [self hideSocialMediaMenu];
     menuOBJ = [[GeneralMenuViewController alloc]initWithNibName:@"GeneralMenuViewController" bundle:nil];
+    menuOBJ.delegate = self;
     [menuView addSubview:menuOBJ.view];
     menuOBJ.view.hidden = true;
     CGRect tmpFrame = menuOBJ.view.frame;
@@ -87,31 +88,126 @@
     [self fadeInAnimationForView:menuOBJ.view];
 }
 -(void)hideMenu{
-    isMenuOpen = false;
-    [menuOBJ.view removeFromSuperview];
-    menuOBJ = nil;
+    if (isMenuOpen) {
+        isMenuOpen = false;
+        [menuOBJ.view removeFromSuperview];
+        menuOBJ = nil;
+    }
+}
+-(void)hideSocialMediaMenu
+{
+    if (isSocialMediaOpen) {
+        btnShare.tintColor = [UIColor whiteColor];
+        isSocialMediaOpen = false;
+        [menuSocialMedia.view removeFromSuperview];
+        menuSocialMedia = nil;
+    }
 }
 - (void)fadeInAnimationForView:(UIView *)someView
 {
     someView.hidden = false;
     [someView setAlpha:0];
     [UIView beginAnimations:@"FadeIn" context:nil];
-    [UIView setAnimationDuration:0.8];
+    [UIView setAnimationDuration:0.5];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [someView setAlpha:1];
     [UIView commitAnimations];
 }
 - (void)fadeOutAnimationForView:(UIView *)someView{
     [UIView beginAnimations:@"FadeOut" context:nil];
-    [UIView setAnimationDuration:0.5 ];
+    [UIView setAnimationDuration:0.4 ];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(hideMenu)];
     [someView setAlpha:0];
     [UIView commitAnimations];
 }
-
-
+#pragma mark - Menu Delegate
+- (void)menuTappedWithIndex:(NSInteger)tappedIndex
+{
+    switch (tappedIndex) {
+        case 1:
+            {//About US
+            }
+            break;
+        case 2:
+            {//Product Details
+            }
+            break;
+        case 3:
+            {//Contact us
+            }
+            break;
+        case 4:
+            {//TErms and condition
+            }
+            break;
+            
+        default:
+            break;
+    }
+    [self btnMenuTapped:btnMenu];
+}
+#pragma mark Social Media Menu
+-(IBAction)showSocialMediaMenu:(UIButton *)sender{
+    [self hideMenu];
+    if (isSocialMediaOpen) {
+        isSocialMediaOpen = false;
+        btnShare.tintColor = [UIColor whiteColor];
+        [self fadeOutAnimationForView:menuSocialMedia.view];
+    }else{
+        [self showSocialMediaWithSender:sender];
+    }
+}
+- (void)showSocialMediaWithSender:(UIButton *)sender
+{
+    sender.tintColor = [UIColor redColor];
+    menuSocialMedia = [[SocialMediaViewController alloc]initWithNibName:@"SocialMediaViewController" bundle:nil];
+    menuSocialMedia.delegate = self;
+    [self.view addSubview:menuSocialMedia.view];
+    menuSocialMedia.view.hidden = true;
+    CGRect tmpFrame = menuSocialMedia.view.frame;
+    tmpFrame.origin.y = (sender.frame.origin.y + sender.frame.size.height)-5;
+    tmpFrame.origin.x = sender.center.x-tmpFrame.size.width;
+    menuSocialMedia.view.frame = tmpFrame;
+    isSocialMediaOpen = true;
+    [self fadeInAnimationForView:menuSocialMedia.view];
+}
+#pragma mark Social Media Menu delegate
+- (void)menuSocialMediaTappedWithIndex:(NSInteger)tappedIndex
+{
+    switch (tappedIndex) {
+        case 1:
+        {//Facebook
+        }
+            break;
+        case 2:
+        {//twitter
+        }
+            break;
+        case 3:
+        {//google+
+        }
+            break;
+        case 4:
+        {//LinkIn
+        }
+            break;
+        case 5:
+        {//Insta
+        }
+            break;
+        case 6:
+        {//Pinterest
+        }
+            break;
+            
+        default:
+            break;
+    }
+    [self hideSocialMediaMenu];
+    [btnShare setSelected:NO];
+}
 #pragma mark Finder mode implementation
 
 - (void) didStartCapture {

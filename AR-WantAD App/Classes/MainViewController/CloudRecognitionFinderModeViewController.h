@@ -10,7 +10,8 @@
 #import <CraftARCloudImageRecognitionSDK/CraftARSDK.h>
 #import <CraftARCloudImageRecognitionSDK/CraftARCloudRecognition.h>
 #import "GeneralMenuViewController.h"
-@interface CloudRecognitionFinderModeViewController : UIViewController<CraftARSDKProtocol, SearchProtocol>
+#import "SocialMediaViewController.h"
+@interface CloudRecognitionFinderModeViewController : UIViewController<CraftARSDKProtocol, SearchProtocol,GeneralMenuViewControllerDelegate,SocialMediaViewControllerDelegate>
 {
     // CraftAR SDK reference
     CraftARSDK * mSDK;
@@ -21,7 +22,9 @@
     __weak IBOutlet UIButton *btnShare;
     __weak IBOutlet UIView *menuView;
     GeneralMenuViewController *menuOBJ;
+    SocialMediaViewController *menuSocialMedia;
     BOOL isMenuOpen;
+    BOOL isSocialMediaOpen;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *_preview;

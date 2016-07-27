@@ -13,12 +13,28 @@
 @end
 
 @implementation SocialMediaViewController
-
+@synthesize delegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-
+- (IBAction)btnMenuTapped:(UIButton *)sender
+{
+    [self setOtherButtonNotSelectedWithSender:sender];
+    [self.delegate menuSocialMediaTappedWithIndex:sender.tag];
+}
+- (void)setOtherButtonNotSelectedWithSender:(UIButton *)sender
+{
+    for (int i = 0; i<6; i++) {
+        UIButton *btnMenu =(UIButton *)[self.view viewWithTag:i+1];
+        if (sender == btnMenu) {
+            [btnMenu setSelected:YES];
+        }else{
+            [btnMenu setSelected:NO];
+        }
+        
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

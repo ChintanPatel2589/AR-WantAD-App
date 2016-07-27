@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol SocialMediaViewControllerDelegate<NSObject>
+- (void)menuSocialMediaTappedWithIndex:(NSInteger)tappedIndex;
+@end
 
 @interface SocialMediaViewController : UIViewController
-
+{
+    __weak id<SocialMediaViewControllerDelegate> delegate;
+}
+@property(nonatomic,weak)id<SocialMediaViewControllerDelegate> delegate;
 @end

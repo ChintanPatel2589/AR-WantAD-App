@@ -13,7 +13,7 @@
 @end
 
 @implementation GeneralMenuViewController
-
+@synthesize delegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setDefaultData];
@@ -31,31 +31,7 @@
 }
 - (IBAction)btnMenuTapped:(UIButton *)sender
 {
-    switch (sender.tag) {
-        case 1:
-        {
-            
-        }
-            break;
-        case 2:
-        {
-            
-        }
-            break;
-        case 3:
-        {
-            
-        }
-            break;
-        case 4:
-        {
-            
-        }
-            break;
-            
-        default:
-            break;
-    }
+    [self.delegate menuTappedWithIndex:sender.tag];
 }
 #pragma mark - IBActions
 - (void)didReceiveMemoryWarning {
