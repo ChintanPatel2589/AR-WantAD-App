@@ -62,6 +62,7 @@
 }
 
 #pragma mark - IBActions 
+
 - (IBAction)btnMenuTapped:(UIButton *)sender
 {
     if (isMenuOpen) {
@@ -94,40 +95,17 @@
         menuOBJ = nil;
     }
 }
--(void)hideSocialMediaMenu
-{
-    if (isSocialMediaOpen) {
-        btnShare.tintColor = [UIColor whiteColor];
-        isSocialMediaOpen = false;
-        [menuSocialMedia.view removeFromSuperview];
-        menuSocialMedia = nil;
-    }
-}
-- (void)fadeInAnimationForView:(UIView *)someView
-{
-    someView.hidden = false;
-    [someView setAlpha:0];
-    [UIView beginAnimations:@"FadeIn" context:nil];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [someView setAlpha:1];
-    [UIView commitAnimations];
-}
-- (void)fadeOutAnimationForView:(UIView *)someView{
-    [UIView beginAnimations:@"FadeOut" context:nil];
-    [UIView setAnimationDuration:0.4 ];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(hideMenu)];
-    [someView setAlpha:0];
-    [UIView commitAnimations];
-}
+
 #pragma mark - Menu Delegate
 - (void)menuTappedWithIndex:(NSInteger)tappedIndex
 {
     switch (tappedIndex) {
         case 1:
             {//About US
+                aboutUSViewOBJ =[[AboutViewController alloc]initWithNibName:@"AboutViewController" bundle:nil];
+                aboutUSViewOBJ.view.frame = self.view.frame;
+                [self.view addSubview:aboutUSViewOBJ.view];
+                [self.view bringSubviewToFront:aboutUSViewOBJ.view];
             }
             break;
         case 2:
@@ -173,6 +151,15 @@
     isSocialMediaOpen = true;
     [self fadeInAnimationForView:menuSocialMedia.view];
 }
+-(void)hideSocialMediaMenu
+{
+    if (isSocialMediaOpen) {
+        btnShare.tintColor = [UIColor whiteColor];
+        isSocialMediaOpen = false;
+        [menuSocialMedia.view removeFromSuperview];
+        menuSocialMedia = nil;
+    }
+}
 #pragma mark Social Media Menu delegate
 - (void)menuSocialMediaTappedWithIndex:(NSInteger)tappedIndex
 {
@@ -205,8 +192,41 @@
         default:
             break;
     }
-    [self hideSocialMediaMenu];
+    [self showSocialMediaMenu:btnShare];
     [btnShare setSelected:NO];
+}
+- (void)fadeInAnimationForView:(UIView *)someView
+{
+    someView.hidden = false;
+    [someView setAlpha:0];
+    [UIView beginAnimations:@"FadeIn" context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [someView setAlpha:1];
+    [UIView commitAnimations];
+}
+- (void)fadeOutAnimationForView:(UIView *)someView{
+    [UIView beginAnimations:@"FadeOut" context:nil];
+    [UIView setAnimationDuration:0.4 ];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDelegate:self];
+    if (menuSocialMedia.view == someView) {
+        [UIView setAnimationDidStopSelector:@selector(hideSocialMediaMenu)];
+    }else{
+        [UIView setAnimationDidStopSelector:@selector(hideMenu)];
+    }
+    
+    [someView setAlpha:0];
+    [UIView commitAnimations];
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    if(isSocialMediaOpen){
+        [self showSocialMediaMenu:btnShare];
+    }
+    if (isMenuOpen) {
+        [self btnMenuTapped:btnMenu];
+    }
 }
 #pragma mark Finder mode implementation
 
@@ -225,8 +245,6 @@
         NSLog(@"Error setting token: %@", error.localizedDescription);
     }];
 }
-
-
 - (void) didGetSearchResults:(NSArray *)results {
     self._scanningOverlay.hidden = YES;
     [mSDK stopFinder];
@@ -251,8 +269,6 @@
         [mSDK startFinder];
     }
 }
-
-
 - (void) didFailSearchWithError:(NSError *)error {
     self._scanningOverlay.hidden = NO;
     [self._scanningOverlay setNeedsDisplay];
@@ -263,7 +279,7 @@
     // Token valid, do nothing
 }
 
-#pragma mark -
+
 
 
 #pragma mark view lifecycle

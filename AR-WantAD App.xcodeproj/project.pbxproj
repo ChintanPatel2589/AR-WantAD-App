@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90547641D4A692D008E32C7 /* CraftARCloudImageRecognitionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90547621D4A692D008E32C7 /* CraftARCloudImageRecognitionSDK.framework */; };
+		B90547651D4A692D008E32C7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90547631D4A692D008E32C7 /* Pods.framework */; };
+		B905476A1D4A6DFA008E32C7 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90547681D4A6DFA008E32C7 /* AboutViewController.m */; };
+		B905476B1D4A6DFA008E32C7 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90547691D4A6DFA008E32C7 /* AboutViewController.xib */; };
 		B95BA5F11D452098008F04ED /* CPLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA5DD1D452098008F04ED /* CPLoader.m */; };
 		B95BA5F21D452098008F04ED /* RTSpinKitBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA5E01D452098008F04ED /* RTSpinKitBounceAnimation.m */; };
 		B95BA5F31D452098008F04ED /* RTSpinKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA5E21D452098008F04ED /* RTSpinKitUtils.m */; };
@@ -24,8 +28,6 @@
 		B993F9BD1D46834100BEC7ED /* menu_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B993F9BA1D46834100BEC7ED /* menu_bkg.png */; };
 		B993F9BE1D46834100BEC7ED /* red_strip_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B993F9BB1D46834100BEC7ED /* red_strip_1.png */; };
 		B993F9BF1D46834100BEC7ED /* red_strip_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B993F9BC1D46834100BEC7ED /* red_strip_2.png */; };
-		B995A87C1D49169C00C5A544 /* CraftARCloudImageRecognitionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995A87A1D49169C00C5A544 /* CraftARCloudImageRecognitionSDK.framework */; };
-		B995A87D1D49169C00C5A544 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995A87B1D49169C00C5A544 /* Pods.framework */; };
 		B995A88D1D491A8900C5A544 /* ico_fb.png in Resources */ = {isa = PBXBuildFile; fileRef = B995A87F1D491A8900C5A544 /* ico_fb.png */; };
 		B995A88E1D491A8900C5A544 /* ico_fb_active.png in Resources */ = {isa = PBXBuildFile; fileRef = B995A8801D491A8900C5A544 /* ico_fb_active.png */; };
 		B995A88F1D491A8900C5A544 /* ico_google.png in Resources */ = {isa = PBXBuildFile; fileRef = B995A8811D491A8900C5A544 /* ico_google.png */; };
@@ -59,6 +61,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B90547621D4A692D008E32C7 /* CraftARCloudImageRecognitionSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CraftARCloudImageRecognitionSDK.framework; sourceTree = "<group>"; };
+		B90547631D4A692D008E32C7 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods.framework; sourceTree = "<group>"; };
+		B90547671D4A6DFA008E32C7 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		B90547681D4A6DFA008E32C7 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B90547691D4A6DFA008E32C7 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		B95BA5DC1D452098008F04ED /* CPLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLoader.h; sourceTree = "<group>"; };
 		B95BA5DD1D452098008F04ED /* CPLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLoader.m; sourceTree = "<group>"; };
 		B95BA5DE1D452098008F04ED /* RTSpinKitAnimating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitAnimating.h; sourceTree = "<group>"; };
@@ -88,8 +95,6 @@
 		B993F9BA1D46834100BEC7ED /* menu_bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_bkg.png; sourceTree = "<group>"; };
 		B993F9BB1D46834100BEC7ED /* red_strip_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_strip_1.png; sourceTree = "<group>"; };
 		B993F9BC1D46834100BEC7ED /* red_strip_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_strip_2.png; sourceTree = "<group>"; };
-		B995A87A1D49169C00C5A544 /* CraftARCloudImageRecognitionSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CraftARCloudImageRecognitionSDK.framework; sourceTree = "<group>"; };
-		B995A87B1D49169C00C5A544 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods.framework; sourceTree = "<group>"; };
 		B995A87F1D491A8900C5A544 /* ico_fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_fb.png; sourceTree = "<group>"; };
 		B995A8801D491A8900C5A544 /* ico_fb_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_fb_active.png; sourceTree = "<group>"; };
 		B995A8811D491A8900C5A544 /* ico_google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_google.png; sourceTree = "<group>"; };
@@ -137,8 +142,8 @@
 				B9F2964B1D41390600992C57 /* AudioToolbox.framework in Frameworks */,
 				B9F296491D4138FA00992C57 /* QuartzCore.framework in Frameworks */,
 				B9F296391D41371F00992C57 /* MobileCoreServices.framework in Frameworks */,
-				B995A87C1D49169C00C5A544 /* CraftARCloudImageRecognitionSDK.framework in Frameworks */,
-				B995A87D1D49169C00C5A544 /* Pods.framework in Frameworks */,
+				B90547641D4A692D008E32C7 /* CraftARCloudImageRecognitionSDK.framework in Frameworks */,
+				B90547651D4A692D008E32C7 /* Pods.framework in Frameworks */,
 				B9F296371D41371900992C57 /* SystemConfiguration.framework in Frameworks */,
 				B9F296351D41371400992C57 /* AVFoundation.framework in Frameworks */,
 				B9F296331D41370B00992C57 /* CoreMedia.framework in Frameworks */,
@@ -148,6 +153,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B90547661D4A6DDD008E32C7 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+				B90547671D4A6DFA008E32C7 /* AboutViewController.h */,
+				B90547681D4A6DFA008E32C7 /* AboutViewController.m */,
+				B90547691D4A6DFA008E32C7 /* AboutViewController.xib */,
+			);
+			path = "About Us";
+			sourceTree = "<group>";
+		};
 		B95BA5DA1D452098008F04ED /* EXTRA Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +340,7 @@
 			children = (
 				B95BA5DA1D452098008F04ED /* EXTRA Library */,
 				B9F2963F1D41385A00992C57 /* MainViewController */,
+				B90547661D4A6DDD008E32C7 /* About Us */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -342,8 +358,8 @@
 		B9F296421D41385A00992C57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B995A87A1D49169C00C5A544 /* CraftARCloudImageRecognitionSDK.framework */,
-				B995A87B1D49169C00C5A544 /* Pods.framework */,
+				B90547621D4A692D008E32C7 /* CraftARCloudImageRecognitionSDK.framework */,
+				B90547631D4A692D008E32C7 /* Pods.framework */,
 				B9F2964E1D41391C00992C57 /* libc++.tbd */,
 				B9F2964C1D41390E00992C57 /* CoreLocation.framework */,
 				B9F2964A1D41390600992C57 /* AudioToolbox.framework */,
@@ -419,6 +435,7 @@
 				B995A88F1D491A8900C5A544 /* ico_google.png in Resources */,
 				B995A8921D491A8900C5A544 /* ico_insta_active.png in Resources */,
 				B9F2962B1D41364800992C57 /* LaunchScreen.storyboard in Resources */,
+				B905476B1D4A6DFA008E32C7 /* AboutViewController.xib in Resources */,
 				B993F9BD1D46834100BEC7ED /* menu_bkg.png in Resources */,
 				B995A8951D491A8900C5A544 /* ico_pinterest.png in Resources */,
 				B995A8901D491A8900C5A544 /* ico_google_active.png in Resources */,
@@ -454,6 +471,7 @@
 				B95BA5F21D452098008F04ED /* RTSpinKitBounceAnimation.m in Sources */,
 				B95BA5F61D452098008F04ED /* NSString+FontAwesome.m in Sources */,
 				B95BA6081D452979008F04ED /* CloudRecognitionFinderModeViewController.m in Sources */,
+				B905476A1D4A6DFA008E32C7 /* AboutViewController.m in Sources */,
 				B995AE341D47CA73002045D9 /* GeneralMenuViewController.m in Sources */,
 				B9F2961D1D41364800992C57 /* main.m in Sources */,
 				B995AE2D1D47C1CB002045D9 /* SocialMediaViewController.m in Sources */,
@@ -567,14 +585,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/AR-WantAD",
-					App/Frameworks,
-					"$(PROJECT_DIR)/AR-WantAD",
-					App/Frameworks,
-					"$(PROJECT_DIR)/AR-WantAD",
-					App/Frameworks,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AR-WantAD App/Frameworks";
 				GCC_PREFIX_HEADER = "AR-WantAD App/PrefixHeader-AR-WantAD App.pch";
 				INFOPLIST_FILE = "AR-WantAD App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -589,14 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/AR-WantAD",
-					App/Frameworks,
-					"$(PROJECT_DIR)/AR-WantAD",
-					App/Frameworks,
-					"$(PROJECT_DIR)/AR-WantAD",
-					App/Frameworks,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AR-WantAD App/Frameworks";
 				GCC_PREFIX_HEADER = "AR-WantAD App/PrefixHeader-AR-WantAD App.pch";
 				INFOPLIST_FILE = "AR-WantAD App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
