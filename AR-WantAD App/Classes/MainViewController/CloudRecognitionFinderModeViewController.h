@@ -29,7 +29,8 @@
     AboutViewController *aboutUSViewOBJ;
     BOOL isMenuOpen;
     BOOL isSocialMediaOpen;
-    UIPopoverController *popOver;
+    
+    UIPopoverController *popover;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *_preview;

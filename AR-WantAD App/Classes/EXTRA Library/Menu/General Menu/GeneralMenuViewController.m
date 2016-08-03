@@ -32,7 +32,14 @@
 - (IBAction)btnMenuTapped:(UIButton *)sender
 {
     [self.delegate menuTappedWithIndex:sender.tag];
+    
 }
+#pragma mark Social Media Menu delegate
+- (void)menuSocialMediaTappedWithIndex:(NSInteger)tappedIndex
+{
+    
+}
+
 #pragma mark - IBActions
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

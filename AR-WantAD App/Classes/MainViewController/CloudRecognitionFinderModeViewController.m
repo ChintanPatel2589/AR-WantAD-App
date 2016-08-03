@@ -61,8 +61,58 @@
     }
 }
 
-#pragma mark - IBActions 
 
+#pragma mark Finder mode implementation
+
+- (void) didStartCapture {
+    captureStarted=YES;
+    // The SDK manages the Single shot search and the Finder Mode search,
+    // the cloud recognition is the delegate for doing the searches.
+    // This needs to be done after the camera initialization
+    mSDK.searchControllerDelegate = mCloudRecognition.mSearchController;
+    
+    // Set the colleciton we will search using the token.
+    [mCloudRecognition setCollectionWithToken:@"32bc2e15be2e4cbe" onSuccess:^{
+        NSLog(@"Ready to search!");
+        [mSDK startFinder];
+    } andOnError:^(NSError *error) {
+        NSLog(@"Error setting token: %@", error.localizedDescription);
+    }];
+}
+- (void) didGetSearchResults:(NSArray *)results {
+    self._scanningOverlay.hidden = YES;
+    [mSDK stopFinder];
+    
+    if ([results count] >= 1) {
+        // Found one item, launch its content on a webView:
+        CraftARSearchResult* result = [results objectAtIndex:0];
+        
+        CraftARItem *item = result.item;
+        
+        // Open URL in Webview
+        UIViewController *webViewController = [[UIViewController alloc] init];
+        UIWebView *uiWebView = [[UIWebView alloc] initWithFrame: self.view.frame];
+        [uiWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:item.url]]];
+        uiWebView.scalesPageToFit = YES;
+        [webViewController.view addSubview: uiWebView];
+        [self.navigationController pushViewController:webViewController animated:YES];
+        self._scanningOverlay.hidden = YES;
+    } else {
+        self._scanningOverlay.hidden = NO;
+        [self._scanningOverlay setNeedsDisplay];
+        [mSDK startFinder];
+    }
+}
+- (void) didFailSearchWithError:(NSError *)error {
+    self._scanningOverlay.hidden = NO;
+    [self._scanningOverlay setNeedsDisplay];
+    [mSDK startFinder];
+}
+
+- (void) didValidateToken {
+    // Token valid, do nothing
+}
+#pragma mark - IBActions
 - (IBAction)btnMenuTapped:(UIButton *)sender
 {
     if (isMenuOpen) {
@@ -95,31 +145,30 @@
         menuOBJ = nil;
     }
 }
-
 #pragma mark - Menu Delegate
 - (void)menuTappedWithIndex:(NSInteger)tappedIndex
 {
     switch (tappedIndex) {
         case 1:
-            {//About US
-                aboutUSViewOBJ =[[AboutViewController alloc]initWithNibName:@"AboutViewController" bundle:nil];
-                [self.view addSubview:aboutUSViewOBJ.view];
-                aboutUSViewOBJ.view.frame = self.view.frame;
-                [self.view bringSubviewToFront:aboutUSViewOBJ.view];
-                NSLog(@"about us tapped");
-            }
+        {//About US
+            aboutUSViewOBJ =[[AboutViewController alloc]initWithNibName:@"AboutViewController" bundle:nil];
+            [self.view addSubview:aboutUSViewOBJ.view];
+            aboutUSViewOBJ.view.frame = self.view.frame;
+            [self.view bringSubviewToFront:aboutUSViewOBJ.view];
+            NSLog(@"about us tapped");
+        }
             break;
         case 2:
-            {//Product Details
-            }
+        {//Product Details
+        }
             break;
         case 3:
-            {//Contact us
-            }
+        {//Contact us
+        }
             break;
         case 4:
-            {//TErms and condition
-            }
+        {//TErms and condition
+        }
             break;
             
         default:
@@ -259,15 +308,15 @@
         }];
     }else{
         UIAlertView *alertViewTwitter = [[UIAlertView alloc]
-                                          initWithTitle:@"No Twitter Accounts"
-                                          message:@"There are no Twitter accounts configured. You can add or create a Twitter account in Settings."
-                                          delegate:self
-                                          cancelButtonTitle:@"Settings"
-                                          otherButtonTitles:@"Cancel",nil];
+                                         initWithTitle:@"No Twitter Accounts"
+                                         message:@"There are no Twitter accounts configured. You can add or create a Twitter account in Settings."
+                                         delegate:self
+                                         cancelButtonTitle:@"Settings"
+                                         otherButtonTitles:@"Cancel",nil];
         [alertViewTwitter show];
     }
     
-  
+    
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -306,29 +355,35 @@
 }
 -(IBAction)shareImageToInstagram:(id)sender
 {
-    DMActivityInstagram *instagramActivity = [[DMActivityInstagram alloc] init];
-    instagramActivity.presentFromButton = (UIBarButtonItem *)sender;
-    NSString *shareText = @"CatPaint #catpaint";
-    NSURL *shareURL = [NSURL URLWithString:@"http://catpaint.info"];
-    
-    NSArray *activityItems = @[shareText, shareURL];
-    NSArray *applicationActivities = @[instagramActivity];
-    NSArray *excludeActivities = @[];
-    
-    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
-    activityController.excludedActivityTypes = excludeActivities;
-    
-     //switch for iPhone and iPad.
+    NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
+    if([[UIApplication sharedApplication] canOpenURL:instagramURL]) //check for App is install or not
+    {
+        DMActivityInstagram *instagramActivity = [[DMActivityInstagram alloc] init];
+        instagramActivity.presentFromButton = (UIBarButtonItem *)sender;
+        NSString *shareText = @"CatPaint #catpaint";
+        NSURL *shareURL = [NSURL URLWithString:@"http://catpaint.info"];
+        
+        NSArray *activityItems = @[shareText, shareURL];
+        NSArray *applicationActivities = @[instagramActivity];
+        NSArray *excludeActivities = @[];
+        
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+        activityController.excludedActivityTypes = excludeActivities;
+        
+        //switch for iPhone and iPad.
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            popOver = [[UIPopoverController alloc] initWithContentViewController:activityController];
-            popOver.delegate = self;
-            [popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+            popover = [[UIPopoverController alloc] initWithContentViewController:activityController];
+            popover.delegate = self;
+            [popover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+            
         } else {
-                [self presentViewController:activityController animated:YES completion:^{
+            [self presentViewController:activityController animated:YES completion:^{
                 NSLog(@"Activity complete");
-        }];
+            }];
+        }
+    }else{
+        [CommonMethods showAlertViewWithMessage:@"To share on Instagram you need to Install App."];
     }
-    
 }
 -(void)shareOnLinkeIn
 {
@@ -372,57 +427,6 @@
         //[self btnMenuTapped:btnMenu];
     }
 }
-#pragma mark Finder mode implementation
-
-- (void) didStartCapture {
-    captureStarted=YES;
-    // The SDK manages the Single shot search and the Finder Mode search,
-    // the cloud recognition is the delegate for doing the searches.
-    // This needs to be done after the camera initialization
-    mSDK.searchControllerDelegate = mCloudRecognition.mSearchController;
-    
-    // Set the colleciton we will search using the token.
-    [mCloudRecognition setCollectionWithToken:@"32bc2e15be2e4cbe" onSuccess:^{
-        NSLog(@"Ready to search!");
-        [mSDK startFinder];
-    } andOnError:^(NSError *error) {
-        NSLog(@"Error setting token: %@", error.localizedDescription);
-    }];
-}
-- (void) didGetSearchResults:(NSArray *)results {
-    self._scanningOverlay.hidden = YES;
-    [mSDK stopFinder];
-    
-    if ([results count] >= 1) {
-        // Found one item, launch its content on a webView:
-        CraftARSearchResult* result = [results objectAtIndex:0];
-        
-        CraftARItem *item = result.item;
-        
-        // Open URL in Webview
-        UIViewController *webViewController = [[UIViewController alloc] init];
-        UIWebView *uiWebView = [[UIWebView alloc] initWithFrame: self.view.frame];
-        [uiWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:item.url]]];
-        uiWebView.scalesPageToFit = YES;
-        [webViewController.view addSubview: uiWebView];
-        [self.navigationController pushViewController:webViewController animated:YES];
-        self._scanningOverlay.hidden = YES;
-    } else {
-        self._scanningOverlay.hidden = NO;
-        [self._scanningOverlay setNeedsDisplay];
-        [mSDK startFinder];
-    }
-}
-- (void) didFailSearchWithError:(NSError *)error {
-    self._scanningOverlay.hidden = NO;
-    [self._scanningOverlay setNeedsDisplay];
-    [mSDK startFinder];
-}
-
-- (void) didValidateToken {
-    // Token valid, do nothing
-}
-
 #pragma mark view lifecycle
 
 - (void) viewWillDisappear:(BOOL)animated {

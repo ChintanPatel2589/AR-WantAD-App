@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @protocol GeneralMenuViewControllerDelegate<NSObject>
 - (void)menuTappedWithIndex:(NSInteger)tappedIndex;
 @end
