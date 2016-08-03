@@ -21,14 +21,30 @@
 }
 -(void)setDefaultData
 {
-    [viewAboutUs.layer setCornerRadius:10];
+    [viewAboutUs.layer setCornerRadius:15];
+    
      txtViewDescription.textAlignment = NSTextAlignmentJustified;
     [btnInfo setImage:[CommonMethods imageWithIcon:@"fa-info" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] fontSize:30] forState:UIControlStateNormal];
     
     [btnClose setImage:[CommonMethods imageWithIcon:@"fa-times-circle-o" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] fontSize:30] forState:UIControlStateNormal];
+
 }
-- (void)viewWillAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self setMaskTo:viewTitle byRoundingCorners:(UIRectCornerTopLeft|UIRectCornerTopRight)];
+}
+- (void)setMaskTo:(UIView*)view byRoundingCorners:(UIRectCorner)corners
+{
+    UIBezierPath *rounded = [UIBezierPath bezierPathWithRoundedRect:view.bounds
+                                                  byRoundingCorners:corners
+                                                        cornerRadii:CGSizeMake(8.0, 8.0)];
+    CAShapeLayer *shape = [[CAShapeLayer alloc] init];
+    [shape setPath:rounded.CGPath];
+    view.layer.mask = shape;
+}
+- (IBAction)btnCloseTapped:(id)sender{
     
+    [self.view removeFromSuperview];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -9,8 +9,8 @@
 #import "CloudRecognitionFinderModeViewController.h"
 #import <CraftARCloudImageRecognitionSDK/CraftARSDK.h>
 #import <CraftARCloudImageRecognitionSDK/CraftARCloudRecognition.h>
-
-@interface CloudRecognitionFinderModeViewController ()
+#import <SafariServices/SafariServices.h>
+@interface CloudRecognitionFinderModeViewController ()<SFSafariViewControllerDelegate>
 @end
 
 @implementation CloudRecognitionFinderModeViewController
@@ -103,9 +103,10 @@
         case 1:
             {//About US
                 aboutUSViewOBJ =[[AboutViewController alloc]initWithNibName:@"AboutViewController" bundle:nil];
-                aboutUSViewOBJ.view.frame = self.view.frame;
                 [self.view addSubview:aboutUSViewOBJ.view];
+                aboutUSViewOBJ.view.frame = self.view.frame;
                 [self.view bringSubviewToFront:aboutUSViewOBJ.view];
+                NSLog(@"about us tapped");
             }
             break;
         case 2:
@@ -166,22 +167,27 @@
     switch (tappedIndex) {
         case 1:
         {//Facebook
+            [self shareOnFacebook];
         }
             break;
         case 2:
         {//twitter
+            [self shareOnTwitter];
         }
             break;
         case 3:
         {//google+
+            [self showGooglePlusShare:[NSURL URLWithString:@"https://www.google.co.in/"]];
         }
             break;
         case 4:
         {//LinkIn
+            [self shareOnLinkeIn];
         }
             break;
         case 5:
         {//Insta
+            [self shareImageToInstagram:nil];
         }
             break;
         case 6:
@@ -194,6 +200,144 @@
     }
     [self showSocialMediaMenu:btnShare];
     [btnShare setSelected:NO];
+}
+#pragma mark - Social media menu methods
+-(void)shareOnFacebook
+{
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType: SLServiceTypeFacebook];
+        [fbPost addURL:[NSURL URLWithString:@"http://www.sophicts.com/"]];
+        [fbPost addImage:[UIImage imageNamed:@"ico_fb_active.png"]];
+        [fbPost setInitialText:@"AR-WantAD App"];
+        [self presentViewController:fbPost animated:YES completion:nil];
+        [fbPost setCompletionHandler:^(SLComposeViewControllerResult result) {
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Post Canceled");
+                    break;
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"Post Sucessful");
+                    break;
+                default:
+                    break;
+            }
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+    }else{
+        UIAlertView *alertViewTwitter = [[UIAlertView alloc]
+                                         initWithTitle:@"No Facebook Accounts"
+                                         message:@"There are no Facebook accounts configured. You can add or create a Facebook account in Settings."
+                                         delegate:self
+                                         cancelButtonTitle:@"Settings"
+                                         otherButtonTitles:@"Cancel",nil];
+        alertViewTwitter.tag = 105;
+        [alertViewTwitter show];
+    }
+}
+-(void)shareOnTwitter
+{
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *fbPost = [SLComposeViewController composeViewControllerForServiceType: SLServiceTypeTwitter];
+        [fbPost addURL:[NSURL URLWithString:@"http://www.sophicts.com/"]];
+        [fbPost addImage:[UIImage imageNamed:@"ico_fb_active.png"]];
+        [fbPost setInitialText:@"AR-WantAD"];
+        [self presentViewController:fbPost animated:YES completion:nil];
+        [fbPost setCompletionHandler:^(SLComposeViewControllerResult result) {
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Post Canceled");
+                    break;
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"Post Sucessful");
+                    break;
+                default:
+                    break;
+            }
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+    }else{
+        UIAlertView *alertViewTwitter = [[UIAlertView alloc]
+                                          initWithTitle:@"No Twitter Accounts"
+                                          message:@"There are no Twitter accounts configured. You can add or create a Twitter account in Settings."
+                                          delegate:self
+                                          cancelButtonTitle:@"Settings"
+                                          otherButtonTitles:@"Cancel",nil];
+        [alertViewTwitter show];
+    }
+    
+  
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 105) {
+        if (buttonIndex == 0) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=FACEBOOK"]];
+        }
+    }else{
+        if (buttonIndex == 0) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=TWITTER"]];
+        }
+    }
+    
+}
+- (void)showGooglePlusShare:(NSURL*)shareURL {
+    
+    // Construct the Google+ share URL
+    NSURLComponents* urlComponents = [[NSURLComponents alloc]
+                                      initWithString:@"https://plus.google.com/share"];
+    urlComponents.queryItems = @[[[NSURLQueryItem alloc]
+                                  initWithName:@"url"
+                                  value:[shareURL absoluteString]]];
+    
+    NSURL* url = [urlComponents URL];
+    
+    if ([SFSafariViewController class]) {
+        // Open the URL in SFSafariViewController (iOS 9+)
+        SFSafariViewController* controller = [[SFSafariViewController alloc]
+                                              initWithURL:url];
+        controller.delegate = self;
+        [self presentViewController:controller animated:YES completion:nil];
+    } else {
+        // Open the URL in the device's browser
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+-(IBAction)shareImageToInstagram:(id)sender
+{
+    DMActivityInstagram *instagramActivity = [[DMActivityInstagram alloc] init];
+    instagramActivity.presentFromButton = (UIBarButtonItem *)sender;
+    NSString *shareText = @"CatPaint #catpaint";
+    NSURL *shareURL = [NSURL URLWithString:@"http://catpaint.info"];
+    
+    NSArray *activityItems = @[shareText, shareURL];
+    NSArray *applicationActivities = @[instagramActivity];
+    NSArray *excludeActivities = @[];
+    
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    activityController.excludedActivityTypes = excludeActivities;
+    
+     //switch for iPhone and iPad.
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            popOver = [[UIPopoverController alloc] initWithContentViewController:activityController];
+            popOver.delegate = self;
+            [popOver presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        } else {
+                [self presentViewController:activityController animated:YES completion:^{
+                NSLog(@"Activity complete");
+        }];
+    }
+    
+}
+-(void)shareOnLinkeIn
+{
+    NSString *shareText = @"AR-WantAD App";
+    NSURL *shareURL = [NSURL URLWithString:@"http://www.sophicts.com/"];
+    NSArray *items = @[shareText,shareURL];
+    UIActivityViewController *controller = [[UIActivityViewController alloc]initWithActivityItems:items applicationActivities:nil];
+    [self presentViewController:controller animated:YES completion:^{
+    }];
 }
 - (void)fadeInAnimationForView:(UIView *)someView
 {
@@ -222,10 +366,10 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     if(isSocialMediaOpen){
-        [self showSocialMediaMenu:btnShare];
+        //[self showSocialMediaMenu:btnShare];
     }
     if (isMenuOpen) {
-        [self btnMenuTapped:btnMenu];
+        //[self btnMenuTapped:btnMenu];
     }
 }
 #pragma mark Finder mode implementation
@@ -278,9 +422,6 @@
 - (void) didValidateToken {
     // Token valid, do nothing
 }
-
-
-
 
 #pragma mark view lifecycle
 

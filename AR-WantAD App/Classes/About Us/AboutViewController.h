@@ -14,5 +14,6 @@
     __weak IBOutlet UITextView *txtViewDescription;
     __weak IBOutlet UIButton *btnInfo;
     __weak IBOutlet UIButton *btnClose;
+    __weak IBOutlet UIView *viewTitle;
 }
 @end

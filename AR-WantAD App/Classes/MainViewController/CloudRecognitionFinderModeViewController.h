@@ -12,7 +12,9 @@
 #import "GeneralMenuViewController.h"
 #import "SocialMediaViewController.h"
 #import "AboutViewController.h"
-@interface CloudRecognitionFinderModeViewController : UIViewController<CraftARSDKProtocol, SearchProtocol,GeneralMenuViewControllerDelegate,SocialMediaViewControllerDelegate>
+#import <Social/Social.h>
+#import "DMActivityInstagram.h"
+@interface CloudRecognitionFinderModeViewController : UIViewController<CraftARSDKProtocol, SearchProtocol,GeneralMenuViewControllerDelegate,SocialMediaViewControllerDelegate,UIAlertViewDelegate,UIPopoverControllerDelegate>
 {
     // CraftAR SDK reference
     CraftARSDK * mSDK;
@@ -27,7 +29,7 @@
     AboutViewController *aboutUSViewOBJ;
     BOOL isMenuOpen;
     BOOL isSocialMediaOpen;
-    
+    UIPopoverController *popOver;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *_preview;
