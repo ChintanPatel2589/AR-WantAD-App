@@ -21,6 +21,24 @@
 		B95BA6001D4521D2008F04ED /* CommonMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA5FF1D4521D2008F04ED /* CommonMethods.m */; };
 		B95BA6081D452979008F04ED /* CloudRecognitionFinderModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA6061D452979008F04ED /* CloudRecognitionFinderModeViewController.m */; };
 		B95BA6091D452979008F04ED /* FinderMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95BA6071D452979008F04ED /* FinderMode.storyboard */; };
+		B9669FF31D54F29A006A0404 /* Icon-167.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE11D54F29A006A0404 /* Icon-167.png */; };
+		B9669FF41D54F29A006A0404 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE21D54F29A006A0404 /* Icon-60.png */; };
+		B9669FF51D54F29A006A0404 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE31D54F29A006A0404 /* Icon-60@2x.png */; };
+		B9669FF61D54F29A006A0404 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE41D54F29A006A0404 /* Icon-60@3x.png */; };
+		B9669FF71D54F29A006A0404 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE51D54F29A006A0404 /* Icon-72.png */; };
+		B9669FF81D54F29A006A0404 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE61D54F29A006A0404 /* Icon-72@2x.png */; };
+		B9669FF91D54F29A006A0404 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE71D54F29A006A0404 /* Icon-76.png */; };
+		B9669FFA1D54F29A006A0404 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE81D54F29A006A0404 /* Icon-76@2x.png */; };
+		B9669FFB1D54F29A006A0404 /* Icon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FE91D54F29A006A0404 /* Icon-Small-40.png */; };
+		B9669FFC1D54F29A006A0404 /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FEA1D54F29A006A0404 /* Icon-Small-40@2x.png */; };
+		B9669FFD1D54F29A006A0404 /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FEB1D54F29A006A0404 /* Icon-Small-40@3x.png */; };
+		B9669FFE1D54F29A006A0404 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FEC1D54F29A006A0404 /* Icon-Small-50.png */; };
+		B9669FFF1D54F29A006A0404 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FED1D54F29A006A0404 /* Icon-Small-50@2x.png */; };
+		B966A0001D54F29A006A0404 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FEE1D54F29A006A0404 /* Icon-Small.png */; };
+		B966A0011D54F29A006A0404 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FEF1D54F29A006A0404 /* Icon-Small@2x.png */; };
+		B966A0021D54F29A006A0404 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FF01D54F29A006A0404 /* Icon-Small@3x.png */; };
+		B966A0031D54F29A006A0404 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FF11D54F29A006A0404 /* Icon.png */; };
+		B966A0041D54F29A006A0404 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FF21D54F29A006A0404 /* Icon@2x.png */; };
 		B969D0161D52407F00A82809 /* DMActivityInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = B969D0151D52407F00A82809 /* DMActivityInstagram.m */; };
 		B975E3981D4E5C2C007CBFEB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975E3971D4E5C2C007CBFEB /* Social.framework */; };
 		B993F9B41D4669AA00BEC7ED /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = B993F9B21D4669AA00BEC7ED /* grid.png */; };
@@ -90,6 +108,24 @@
 		B95BA6051D452979008F04ED /* CloudRecognitionFinderModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudRecognitionFinderModeViewController.h; sourceTree = "<group>"; };
 		B95BA6061D452979008F04ED /* CloudRecognitionFinderModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudRecognitionFinderModeViewController.m; sourceTree = "<group>"; };
 		B95BA6071D452979008F04ED /* FinderMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinderMode.storyboard; sourceTree = "<group>"; };
+		B9669FE11D54F29A006A0404 /* Icon-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-167.png"; sourceTree = "<group>"; };
+		B9669FE21D54F29A006A0404 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		B9669FE31D54F29A006A0404 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		B9669FE41D54F29A006A0404 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		B9669FE51D54F29A006A0404 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		B9669FE61D54F29A006A0404 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		B9669FE71D54F29A006A0404 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		B9669FE81D54F29A006A0404 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		B9669FE91D54F29A006A0404 /* Icon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40.png"; sourceTree = "<group>"; };
+		B9669FEA1D54F29A006A0404 /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		B9669FEB1D54F29A006A0404 /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
+		B9669FEC1D54F29A006A0404 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		B9669FED1D54F29A006A0404 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		B9669FEE1D54F29A006A0404 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		B9669FEF1D54F29A006A0404 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		B9669FF01D54F29A006A0404 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		B9669FF11D54F29A006A0404 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B9669FF21D54F29A006A0404 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B969D0141D52407F00A82809 /* DMActivityInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivityInstagram.h; sourceTree = "<group>"; };
 		B969D0151D52407F00A82809 /* DMActivityInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivityInstagram.m; sourceTree = "<group>"; };
 		B975E3971D4E5C2C007CBFEB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -240,6 +276,31 @@
 			path = "Common Method Class";
 			sourceTree = "<group>";
 		};
+		B9669FE01D54F29A006A0404 /* App-Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B9669FE11D54F29A006A0404 /* Icon-167.png */,
+				B9669FE21D54F29A006A0404 /* Icon-60.png */,
+				B9669FE31D54F29A006A0404 /* Icon-60@2x.png */,
+				B9669FE41D54F29A006A0404 /* Icon-60@3x.png */,
+				B9669FE51D54F29A006A0404 /* Icon-72.png */,
+				B9669FE61D54F29A006A0404 /* Icon-72@2x.png */,
+				B9669FE71D54F29A006A0404 /* Icon-76.png */,
+				B9669FE81D54F29A006A0404 /* Icon-76@2x.png */,
+				B9669FE91D54F29A006A0404 /* Icon-Small-40.png */,
+				B9669FEA1D54F29A006A0404 /* Icon-Small-40@2x.png */,
+				B9669FEB1D54F29A006A0404 /* Icon-Small-40@3x.png */,
+				B9669FEC1D54F29A006A0404 /* Icon-Small-50.png */,
+				B9669FED1D54F29A006A0404 /* Icon-Small-50@2x.png */,
+				B9669FEE1D54F29A006A0404 /* Icon-Small.png */,
+				B9669FEF1D54F29A006A0404 /* Icon-Small@2x.png */,
+				B9669FF01D54F29A006A0404 /* Icon-Small@3x.png */,
+				B9669FF11D54F29A006A0404 /* Icon.png */,
+				B9669FF21D54F29A006A0404 /* Icon@2x.png */,
+			);
+			path = "App-Icons";
+			sourceTree = "<group>";
+		};
 		B969D0131D52407200A82809 /* Instagram Share Activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +401,7 @@
 				B9F2961F1D41364800992C57 /* AppDelegate.m */,
 				B9F2963E1D41385A00992C57 /* Classes */,
 				B993F9B11D4669AA00BEC7ED /* Images */,
+				B9669FE01D54F29A006A0404 /* App-Icons */,
 				B9F296421D41385A00992C57 /* Frameworks */,
 				B9F296271D41364800992C57 /* Assets.xcassets */,
 				B9F296291D41364800992C57 /* LaunchScreen.storyboard */,
@@ -452,21 +514,37 @@
 			files = (
 				B995A8981D491A8900C5A544 /* ico_twitter.png in Resources */,
 				B995A89A1D491A8900C5A544 /* share_menu_bkg.png in Resources */,
+				B9669FFB1D54F29A006A0404 /* Icon-Small-40.png in Resources */,
 				B995A8991D491A8900C5A544 /* ico_twitter_active.png in Resources */,
 				B995A88F1D491A8900C5A544 /* ico_google.png in Resources */,
+				B966A0041D54F29A006A0404 /* Icon@2x.png in Resources */,
+				B9669FF51D54F29A006A0404 /* Icon-60@2x.png in Resources */,
 				B995A8921D491A8900C5A544 /* ico_insta_active.png in Resources */,
+				B9669FFA1D54F29A006A0404 /* Icon-76@2x.png in Resources */,
+				B966A0001D54F29A006A0404 /* Icon-Small.png in Resources */,
+				B9669FF61D54F29A006A0404 /* Icon-60@3x.png in Resources */,
+				B9669FFF1D54F29A006A0404 /* Icon-Small-50@2x.png in Resources */,
 				B9F2962B1D41364800992C57 /* LaunchScreen.storyboard in Resources */,
+				B966A0021D54F29A006A0404 /* Icon-Small@3x.png in Resources */,
 				B905476B1D4A6DFA008E32C7 /* AboutViewController.xib in Resources */,
+				B966A0011D54F29A006A0404 /* Icon-Small@2x.png in Resources */,
+				B9669FFD1D54F29A006A0404 /* Icon-Small-40@3x.png in Resources */,
 				B993F9BD1D46834100BEC7ED /* menu_bkg.png in Resources */,
+				B9669FF81D54F29A006A0404 /* Icon-72@2x.png in Resources */,
+				B9669FFC1D54F29A006A0404 /* Icon-Small-40@2x.png in Resources */,
 				B995A8951D491A8900C5A544 /* ico_pinterest.png in Resources */,
 				B995A8901D491A8900C5A544 /* ico_google_active.png in Resources */,
 				B995AE291D47C1B1002045D9 /* GeneralMenuViewController.xib in Resources */,
 				B993F9B41D4669AA00BEC7ED /* grid.png in Resources */,
+				B966A0031D54F29A006A0404 /* Icon.png in Resources */,
+				B9669FFE1D54F29A006A0404 /* Icon-Small-50.png in Resources */,
 				B993F9B51D4669AA00BEC7ED /* ico_scan.png in Resources */,
 				B95BA6091D452979008F04ED /* FinderMode.storyboard in Resources */,
+				B9669FF91D54F29A006A0404 /* Icon-76.png in Resources */,
 				B995A8961D491A8900C5A544 /* ico_pinterest_active.png in Resources */,
 				B995AE2E1D47C1CB002045D9 /* SocialMediaViewController.xib in Resources */,
 				B995A8911D491A8900C5A544 /* ico_insta.png in Resources */,
+				B9669FF71D54F29A006A0404 /* Icon-72.png in Resources */,
 				B995A88D1D491A8900C5A544 /* ico_fb.png in Resources */,
 				B995A88E1D491A8900C5A544 /* ico_fb_active.png in Resources */,
 				B995A8931D491A8900C5A544 /* ico_linkedin.png in Resources */,
@@ -475,6 +553,8 @@
 				B993F9BE1D46834100BEC7ED /* red_strip_1.png in Resources */,
 				B993F9BF1D46834100BEC7ED /* red_strip_2.png in Resources */,
 				B995A8941D491A8900C5A544 /* ico_linkedin_active.png in Resources */,
+				B9669FF31D54F29A006A0404 /* Icon-167.png in Resources */,
+				B9669FF41D54F29A006A0404 /* Icon-60.png in Resources */,
 				B95BA5F51D452098008F04ED /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,7 +686,6 @@
 		B9F296301D41364800992C57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = /Users/chintanpatel/Documents/frameworks;
 				GCC_PREFIX_HEADER = "AR-WantAD App/PrefixHeader-AR-WantAD App.pch";
@@ -622,7 +701,6 @@
 		B9F296311D41364800992C57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = /Users/chintanpatel/Documents/frameworks;
 				GCC_PREFIX_HEADER = "AR-WantAD App/PrefixHeader-AR-WantAD App.pch";
