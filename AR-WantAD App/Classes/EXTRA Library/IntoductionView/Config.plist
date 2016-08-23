@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tutorial</key>
+	<dict>
+		<key>Images</key>
+		<array>
+			<string>IntroBackground.png</string>
+			<string>IntroBackground.png</string>
+			<string>IntroBackground.png</string>
+		</array>
+		<key>Labels</key>
+		<array>
+			<dict>
+				<key>Header</key>
+				<string></string>
+				<key>Label</key>
+				<string>Tell users your application purpose</string>
+			</dict>
+			<dict>
+				<key>Header</key>
+				<string>Killer feature</string>
+				<key>Label</key>
+				<string>This application provide you a feature no other give you</string>
+			</dict>
+			<dict>
+				<key>Header</key>
+				<string>Credit author</string>
+				<key>Label</key>
+				<string>You can always credit author if you use an open source component.</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

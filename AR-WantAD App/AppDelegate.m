@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AOTutorialController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,16 +18,34 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [application setStatusBarHidden:YES];
-    UIStoryboard *exampleStoryBoard = [UIStoryboard storyboardWithName:@"FinderMode" bundle:nil];
-     UIViewController *target = (UIViewController *)[exampleStoryBoard instantiateViewControllerWithIdentifier:@"CloudRecognitionFinderModeViewController"];
-    UINavigationController *rootNavigation = [[UINavigationController alloc]initWithRootViewController:target];
-    rootNavigation.navigationBarHidden = true;
-    self.window.rootViewController = rootNavigation;
-    
-
-    return YES;
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:kIntoductionVisited]) {
+        [self setRootView];
+    }else{
+        [self setIntroductionView];
+    }
+        return YES;
 }
+- (void)setIntroductionView{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    AOTutorialController *vc = [[AOTutorialController alloc] initWithBackgroundImages:[[NSDictionary dictionaryWithContentsOfFile:[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Config.plist"]] valueForKeyPath:@"Tutorial.Images"]
+                                                                      andInformations:[[NSDictionary dictionaryWithContentsOfFile:[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Config.plist"]] valueForKeyPath:@"Tutorial.Labels"]];
+    [vc setHeaderImage:[UIImage imageNamed:@"OSI-logo.png"]];
+    [self.window setRootViewController:vc];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 
+}
+- (void)setRootView
+{
+        UIStoryboard *exampleStoryBoard = [UIStoryboard storyboardWithName:@"FinderMode" bundle:nil];
+         UIViewController *target = (UIViewController *)[exampleStoryBoard instantiateViewControllerWithIdentifier:@"CloudRecognitionFinderModeViewController"];
+        UINavigationController *rootNavigation = [[UINavigationController alloc]initWithRootViewController:target];
+        rootNavigation.navigationBarHidden = true;
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        self.window.backgroundColor = [UIColor whiteColor];
+        self.window.rootViewController = rootNavigation;
+    [self.window makeKeyAndVisible];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

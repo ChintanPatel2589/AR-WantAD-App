@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		B905476A1D4A6DFA008E32C7 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90547681D4A6DFA008E32C7 /* AboutViewController.m */; };
 		B905476B1D4A6DFA008E32C7 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90547691D4A6DFA008E32C7 /* AboutViewController.xib */; };
+		B93B51D61D6B4FC200A28155 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51CF1D6B4FC200A28155 /* Default-568h@2x~iphone.png */; };
+		B93B51D71D6B4FC200A28155 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51D01D6B4FC200A28155 /* Default-667h@2x.png */; };
+		B93B51D81D6B4FC200A28155 /* Default-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51D11D6B4FC200A28155 /* Default-Portrait-736h@3x.png */; };
+		B93B51D91D6B4FC200A28155 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51D21D6B4FC200A28155 /* Default-Portrait@2x~ipad.png */; };
+		B93B51DA1D6B4FC200A28155 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51D31D6B4FC200A28155 /* Default-Portrait~ipad.png */; };
+		B93B51DB1D6B4FC200A28155 /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51D41D6B4FC200A28155 /* Default@2x~iphone.png */; };
+		B93B51DC1D6B4FC200A28155 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51D51D6B4FC200A28155 /* Default~iphone.png */; };
+		B93B51DE1D6B517600A28155 /* IntroBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B93B51DD1D6B517600A28155 /* IntroBackground.png */; };
 		B95BA5F11D452098008F04ED /* CPLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA5DD1D452098008F04ED /* CPLoader.m */; };
 		B95BA5F21D452098008F04ED /* RTSpinKitBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA5E01D452098008F04ED /* RTSpinKitBounceAnimation.m */; };
 		B95BA5F31D452098008F04ED /* RTSpinKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B95BA5E21D452098008F04ED /* RTSpinKitUtils.m */; };
@@ -41,6 +49,10 @@
 		B966A0041D54F29A006A0404 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9669FF21D54F29A006A0404 /* Icon@2x.png */; };
 		B969D0161D52407F00A82809 /* DMActivityInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = B969D0151D52407F00A82809 /* DMActivityInstagram.m */; };
 		B975E3981D4E5C2C007CBFEB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975E3971D4E5C2C007CBFEB /* Social.framework */; };
+		B98FC3491D6CAA9C00368254 /* AOTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98FC3471D6CAA9C00368254 /* AOTutorialViewController.m */; };
+		B98FC34A1D6CAA9C00368254 /* AOTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98FC3481D6CAA9C00368254 /* AOTutorialViewController.xib */; };
+		B98FC34C1D6CAACB00368254 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = B98FC34B1D6CAACB00368254 /* Config.plist */; };
+		B98FC34F1D6CAB8E00368254 /* AOTutorialController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98FC34E1D6CAB8E00368254 /* AOTutorialController.m */; };
 		B993F9B41D4669AA00BEC7ED /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = B993F9B21D4669AA00BEC7ED /* grid.png */; };
 		B993F9B51D4669AA00BEC7ED /* ico_scan.png in Resources */ = {isa = PBXBuildFile; fileRef = B993F9B31D4669AA00BEC7ED /* ico_scan.png */; };
 		B993F9BD1D46834100BEC7ED /* menu_bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B993F9BA1D46834100BEC7ED /* menu_bkg.png */; };
@@ -84,6 +96,14 @@
 		B90547671D4A6DFA008E32C7 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		B90547681D4A6DFA008E32C7 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		B90547691D4A6DFA008E32C7 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		B93B51CF1D6B4FC200A28155 /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		B93B51D01D6B4FC200A28155 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		B93B51D11D6B4FC200A28155 /* Default-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		B93B51D21D6B4FC200A28155 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		B93B51D31D6B4FC200A28155 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		B93B51D41D6B4FC200A28155 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
+		B93B51D51D6B4FC200A28155 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		B93B51DD1D6B517600A28155 /* IntroBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IntroBackground.png; sourceTree = "<group>"; };
 		B95BA5DC1D452098008F04ED /* CPLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLoader.h; sourceTree = "<group>"; };
 		B95BA5DD1D452098008F04ED /* CPLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLoader.m; sourceTree = "<group>"; };
 		B95BA5DE1D452098008F04ED /* RTSpinKitAnimating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSpinKitAnimating.h; sourceTree = "<group>"; };
@@ -131,6 +151,12 @@
 		B975E3971D4E5C2C007CBFEB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B975E39D1D4E68D0007CBFEB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		B975E39F1D4E68D9007CBFEB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B98FC3461D6CAA9C00368254 /* AOTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOTutorialViewController.h; sourceTree = "<group>"; };
+		B98FC3471D6CAA9C00368254 /* AOTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOTutorialViewController.m; sourceTree = "<group>"; };
+		B98FC3481D6CAA9C00368254 /* AOTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOTutorialViewController.xib; sourceTree = "<group>"; };
+		B98FC34B1D6CAACB00368254 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		B98FC34D1D6CAB8E00368254 /* AOTutorialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOTutorialController.h; sourceTree = "<group>"; };
+		B98FC34E1D6CAB8E00368254 /* AOTutorialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOTutorialController.m; sourceTree = "<group>"; };
 		B993F9B21D4669AA00BEC7ED /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
 		B993F9B31D4669AA00BEC7ED /* ico_scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_scan.png; sourceTree = "<group>"; };
 		B993F9BA1D46834100BEC7ED /* menu_bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_bkg.png; sourceTree = "<group>"; };
@@ -207,9 +233,37 @@
 			path = "About Us";
 			sourceTree = "<group>";
 		};
+		B93B51CE1D6B4FC200A28155 /* iPhone Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B93B51CF1D6B4FC200A28155 /* Default-568h@2x~iphone.png */,
+				B93B51D01D6B4FC200A28155 /* Default-667h@2x.png */,
+				B93B51D11D6B4FC200A28155 /* Default-Portrait-736h@3x.png */,
+				B93B51D21D6B4FC200A28155 /* Default-Portrait@2x~ipad.png */,
+				B93B51D31D6B4FC200A28155 /* Default-Portrait~ipad.png */,
+				B93B51D41D6B4FC200A28155 /* Default@2x~iphone.png */,
+				B93B51D51D6B4FC200A28155 /* Default~iphone.png */,
+			);
+			path = "iPhone Splash Screen";
+			sourceTree = "<group>";
+		};
+		B93B51DF1D6B553B00A28155 /* IntoductionView */ = {
+			isa = PBXGroup;
+			children = (
+				B98FC34B1D6CAACB00368254 /* Config.plist */,
+				B98FC34D1D6CAB8E00368254 /* AOTutorialController.h */,
+				B98FC34E1D6CAB8E00368254 /* AOTutorialController.m */,
+				B98FC3461D6CAA9C00368254 /* AOTutorialViewController.h */,
+				B98FC3471D6CAA9C00368254 /* AOTutorialViewController.m */,
+				B98FC3481D6CAA9C00368254 /* AOTutorialViewController.xib */,
+			);
+			path = IntoductionView;
+			sourceTree = "<group>";
+		};
 		B95BA5DA1D452098008F04ED /* EXTRA Library */ = {
 			isa = PBXGroup;
 			children = (
+				B93B51DF1D6B553B00A28155 /* IntoductionView */,
 				B969D0131D52407200A82809 /* Instagram Share Activity */,
 				B995AE221D47C17C002045D9 /* Menu */,
 				B95BA5FD1D4521D2008F04ED /* Common Method Class */,
@@ -313,6 +367,8 @@
 		B993F9B11D4669AA00BEC7ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B93B51DD1D6B517600A28155 /* IntroBackground.png */,
+				B93B51CE1D6B4FC200A28155 /* iPhone Splash Screen */,
 				B995A87E1D491A8900C5A544 /* menu-assets */,
 				B993F9BA1D46834100BEC7ED /* menu_bkg.png */,
 				B993F9BB1D46834100BEC7ED /* red_strip_1.png */,
@@ -522,14 +578,20 @@
 				B995A8921D491A8900C5A544 /* ico_insta_active.png in Resources */,
 				B9669FFA1D54F29A006A0404 /* Icon-76@2x.png in Resources */,
 				B966A0001D54F29A006A0404 /* Icon-Small.png in Resources */,
+				B98FC34C1D6CAACB00368254 /* Config.plist in Resources */,
+				B93B51DA1D6B4FC200A28155 /* Default-Portrait~ipad.png in Resources */,
+				B98FC34A1D6CAA9C00368254 /* AOTutorialViewController.xib in Resources */,
 				B9669FF61D54F29A006A0404 /* Icon-60@3x.png in Resources */,
 				B9669FFF1D54F29A006A0404 /* Icon-Small-50@2x.png in Resources */,
+				B93B51D91D6B4FC200A28155 /* Default-Portrait@2x~ipad.png in Resources */,
 				B9F2962B1D41364800992C57 /* LaunchScreen.storyboard in Resources */,
 				B966A0021D54F29A006A0404 /* Icon-Small@3x.png in Resources */,
 				B905476B1D4A6DFA008E32C7 /* AboutViewController.xib in Resources */,
 				B966A0011D54F29A006A0404 /* Icon-Small@2x.png in Resources */,
+				B93B51D61D6B4FC200A28155 /* Default-568h@2x~iphone.png in Resources */,
 				B9669FFD1D54F29A006A0404 /* Icon-Small-40@3x.png in Resources */,
 				B993F9BD1D46834100BEC7ED /* menu_bkg.png in Resources */,
+				B93B51D71D6B4FC200A28155 /* Default-667h@2x.png in Resources */,
 				B9669FF81D54F29A006A0404 /* Icon-72@2x.png in Resources */,
 				B9669FFC1D54F29A006A0404 /* Icon-Small-40@2x.png in Resources */,
 				B995A8951D491A8900C5A544 /* ico_pinterest.png in Resources */,
@@ -541,12 +603,16 @@
 				B993F9B51D4669AA00BEC7ED /* ico_scan.png in Resources */,
 				B95BA6091D452979008F04ED /* FinderMode.storyboard in Resources */,
 				B9669FF91D54F29A006A0404 /* Icon-76.png in Resources */,
+				B93B51D81D6B4FC200A28155 /* Default-Portrait-736h@3x.png in Resources */,
 				B995A8961D491A8900C5A544 /* ico_pinterest_active.png in Resources */,
+				B93B51DC1D6B4FC200A28155 /* Default~iphone.png in Resources */,
+				B93B51DE1D6B517600A28155 /* IntroBackground.png in Resources */,
 				B995AE2E1D47C1CB002045D9 /* SocialMediaViewController.xib in Resources */,
 				B995A8911D491A8900C5A544 /* ico_insta.png in Resources */,
 				B9669FF71D54F29A006A0404 /* Icon-72.png in Resources */,
 				B995A88D1D491A8900C5A544 /* ico_fb.png in Resources */,
 				B995A88E1D491A8900C5A544 /* ico_fb_active.png in Resources */,
+				B93B51DB1D6B4FC200A28155 /* Default@2x~iphone.png in Resources */,
 				B995A8931D491A8900C5A544 /* ico_linkedin.png in Resources */,
 				B9F296281D41364800992C57 /* Assets.xcassets in Resources */,
 				B995A8971D491A8900C5A544 /* ico_share_active.png in Resources */,
@@ -574,9 +640,11 @@
 				B95BA5F61D452098008F04ED /* NSString+FontAwesome.m in Sources */,
 				B95BA6081D452979008F04ED /* CloudRecognitionFinderModeViewController.m in Sources */,
 				B905476A1D4A6DFA008E32C7 /* AboutViewController.m in Sources */,
+				B98FC3491D6CAA9C00368254 /* AOTutorialViewController.m in Sources */,
 				B995AE341D47CA73002045D9 /* GeneralMenuViewController.m in Sources */,
 				B9F2961D1D41364800992C57 /* main.m in Sources */,
 				B995AE2D1D47C1CB002045D9 /* SocialMediaViewController.m in Sources */,
+				B98FC34F1D6CAB8E00368254 /* AOTutorialController.m in Sources */,
 				B95BA6001D4521D2008F04ED /* CommonMethods.m in Sources */,
 				B95BA5F41D452098008F04ED /* RTSpinKitView.m in Sources */,
 				B95BA5F81D452098008F04ED /* WebServiceHandler.m in Sources */,
